@@ -8,7 +8,6 @@ with CTE AS(
     CASE WHEN DAYNAME(TRY_TO_TIMESTAMP(STARTED_AT)) IN ('Sat', 'Sun') THEN 'Weekend'
     else 'Business Day'
     END AS DAY_Type,
-
     case when month(TRY_TO_TIMESTAMP(STARTED_AT)) in (12,1,2) then 'Winter'
     when month(TRY_TO_TIMESTAMP(STARTED_AT)) in (3,4,5) then 'Spring'
     when month(TRY_TO_TIMESTAMP(STARTED_AT)) in (6,7,8) then 'Summer' else 'Autumn'
