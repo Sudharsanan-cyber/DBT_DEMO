@@ -13,7 +13,7 @@ with CTE AS(
     when month(TRY_TO_TIMESTAMP(STARTED_AT)) in (3,4,5) then 'Spring'
     when month(TRY_TO_TIMESTAMP(STARTED_AT)) in (6,7,8) then 'Summer' else 'Autumn'
     end as STATION_OF_YEAR
-    FROM
+    FROM    
     {{ source('demo', 'bike') }}
 
 
