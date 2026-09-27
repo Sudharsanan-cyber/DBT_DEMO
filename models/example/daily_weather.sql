@@ -29,3 +29,4 @@ qualify row_number() over(partition by daily_weather order by count(weather) des
 
 select *
 from daily_weather_agg
+
